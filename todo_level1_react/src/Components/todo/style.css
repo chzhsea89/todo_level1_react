@@ -1,0 +1,48 @@
+/* todo.css */
+
+.card {  
+    margin-bottom: 10px;
+    margin-right: 12px; 
+    border: 4px solid teal;
+    border-radius: 12px;
+    padding: 12px 24px 24px;
+    width: 270px;
+    
+  }
+  
+  .card-list {
+    display: flex; 
+    flex-direction: row;
+  }
+   
+
+.btn_delete{
+  background-color: #fff;
+  border: 2px solid red;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 40px;
+  width: 50%;
+}
+.btn_complete{
+  background-color: #fff;
+  border: 2px solid green;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 40px;
+  width: 50%;
+}
+.btn_cancel{
+  background-color: #fff;
+  border: 2px solid green;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 40px;
+  width: 50%;
+}
+
+.button-set {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
