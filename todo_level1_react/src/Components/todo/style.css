@@ -9,13 +9,7 @@
     width: 270px;
     
   }
-  
-  .card-list {
-    display: flex; 
-    flex-direction: row;
-  }
    
-
 .btn_delete{
   background-color: #fff;
   border: 2px solid red;
@@ -42,7 +36,7 @@
 }
 
 .button-set {
-  display: flex;
+  display: flex;   
   gap: 10px;
   margin-top: 24px;
 }

@@ -3,7 +3,6 @@ import './style.css'; // Import the CSS file
 
 const Form = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState({ title: '', desc: '' });
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (newTodo.title.trim() === '') {

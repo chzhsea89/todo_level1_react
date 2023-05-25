@@ -26,11 +26,11 @@ const App = () => {
   };
 
   const completeTodo = (id) => {
-    const updatedTodos = todos.map((todo) => {
+    let updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
         return {
           ...todo,
-          isDone: !todo.isDone,
+          isDone: true, // Set to true as the todo is now completed
         };
       }
       return todo;
@@ -41,11 +41,20 @@ const App = () => {
   };
 
   const cancelTodo = (id) => {
-    const updatedCompletedTodos = completedTodos.filter((todo) => todo.id !== id);
-    setCompletedTodos(updatedCompletedTodos);
-    const cancelledTodo = completedTodos.find((todo) => todo.id === id);
+    let updatedCompletedTodos = completedTodos.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          isDone: false, // Set to false as the todo is now not completed
+        };
+      }
+      return todo;
+    });
+    const cancelledTodo = updatedCompletedTodos.find((todo) => todo.id === id);
     setTodos([...todos, cancelledTodo]);
+    setCompletedTodos(updatedCompletedTodos.filter((todo) => todo.id !== id));
   };
+
 
   return (
     <div className="App">
